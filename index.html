@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Pipes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="screen-start" class="screen" style="display: block;"PS C:\Users\Richard\Desktop\Space pipes> git --version
+        git : Имя "git" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильность написания имени, а также наличие и п
+        равильность пути, после чего повторите попытку.
+        строка:1 знак:1
+        + git --version
+        + ~~~
+        + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+        + FullyQualifiedErrorId : CommandNotFoundException
+        >
+        <h1>SPACE PIPES</h1>
+        <p class="subtitle">Система жизнеобеспечения</p>
+
+        <input type="text" id="username" placeholder="Введите имя" oninput="checkName()" autocomplete="off">
+
+        <button id="btn-start" onclick="startGame()" disabled>НАЧАТЬ</button>
+    </div>
+
+    <div id="screen-game" class="screen">
+        <div class="game-header">
+            <div class="info-box">Время: <span id="timer">02:00</span></div>
+            <div class="info-box">Очки: <span id="score">120</span></div>
+        </div>
+
+        <div id="game-field" class="grid-container">
+        </div>
+
+        <div class="guide">
+            <p>Кликай на трубы, чтобы вращать.</p>
+            <p>Соедини верхний левый угол с нижним правым.</p>
+        </div>
+    </div>
+
+    <div id="screen-end" class="screen">
+        <h2 id="end-title">Конец игры</h2>
+        <p id="end-message" style="margin-bottom: 20px;"></p>
+
+        <div style="background: rgba(0,0,0,0.5); padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #333;">
+            <p style="margin: 5px 0;">
+                Заработанные баллы:
+                <span id="final-score" style="color: #0aff60; font-size: 1.2em; font-weight: bold;">0</span>
+            </p>
+            <p style="margin: 5px 0;">
+                Затраченное время:
+                <span id="final-time" style="color: #bc13fe; font-size: 1.2em; font-weight: bold;">00:00</span>
+            </p>
+        </div>
+
+        <button onclick="restartGame()">Играть снова</button>
+    </div>
+
+</div>
+
+<script src="scripts/index.js"></script>
+</body>
+</html>
